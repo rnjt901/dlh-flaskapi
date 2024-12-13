@@ -1,5 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
+name: my-namespace
 metadata:
   name: flask-api
   labels:
@@ -31,6 +32,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: flask-api
+  name: my-namespace
 spec:
   type: LoadBalancer
   selector:
